@@ -1,32 +1,32 @@
-# 🚀 WebRTC 視訊通話與媒體處理全端專案
+# 🚀 WebRTC Video Calling & Media Processing Full-Stack Project
 
-這是一個由我獨立開發的全端專案，整合了高品質的 WebRTC 視訊通話、信令交換、設備管理與媒體處理（錄影、轉檔）功能。專案清晰展示了從前端 UI 互動、後端信令協調到媒體處理的完整技能。
+This is an independently developed full-stack project that integrates high-quality WebRTC video calling, signaling exchange, device management, and media processing (recording, format conversion) functionalities. The project clearly demonstrates complete skills from frontend UI interaction, backend signaling coordination to media processing.
 
-## 📁 專案架構與倉庫連結
+## 📁 Project Architecture & Repository Links
 
-本專案由兩個核心部分構成，點擊連結查看各部分的詳細程式碼與說明：
+This project consists of two core components. Click the links below to view detailed code and documentation for each part:
 
-| 服務名稱 | 技術堆疊 | 倉庫連結 | 核心功能 |
+| Service Name | Technology Stack | Repository Link | Core Features |
 | :--- | :--- | :--- | :--- |
-| **信令與媒體後端服務** | Node.js, Express, Socket.io, FFmpeg | [webrtc_nodejs](https://github.com/lauchiwai/webrtc_nodejs) | WebRTC 信令交換 (Offer/Answer/ICE)、房間管理、WebM 至 MP4 影片轉換 |
-| **前端視訊應用** | Vue 3, TypeScript, Pinia, Ant Design Vue | [webrtc_vue](https://github.com/lauchiwai/webrtc_vue) | 視訊通話界面、設備管理、遠端畫面錄製與截圖、即時連線狀態監控 |
+| **Signaling & Media Backend Service** | Node.js, Express, Socket.io, FFmpeg | [webrtc_nodejs](https://github.com/lauchiwai/webrtc_nodejs) | WebRTC signaling exchange (Offer/Answer/ICE), room management, WebM to MP4 video conversion |
+| **Frontend Video Application** | React, TypeScript, Zustand, Ant Design | [webrtc_react](https://github.com/lauchiwai/webrtc_react) | Video calling interface, device management, remote screen recording & screenshots, real-time connection status monitoring |
 
-## 🛠️ 技術亮點 (Technical Highlights)
+## 🛠️ Technical Highlights
 
-### 🔐 通訊與協商
-- **完整 WebRTC 信令流程**: 基於 Socket.io 實作穩定的信令伺服器，可靠地處理 `offer`, `answer`, `ICE candidate` 的交換與協商。
-- **房間管理機制**: 實現簡單高效的房間號系統，讓用戶能輕鬆加入同一個通話 session。
+### 🔐 Communication & Negotiation
+- **Complete WebRTC Signaling Flow**: Implemented a stable signaling server based on Socket.io, reliably handling the exchange and negotiation of `offer`, `answer`, and `ICE candidate`.
+- **Room Management Mechanism**: Implemented a simple and efficient room number system, allowing users to easily join the same call session.
 
-### 🎥 媒體與設備控制
-- **動態設備管理**: 前端可動態偵測、列舉並切換音訊輸入設備，提供無縫的設備更換體驗。
-- **媒體軌道控制**: 獨立控制音頻與視頻軌道的啟用/禁用，實現靜音、關閉鏡頭等功能。
-- **進階媒體處理**: 實作 `MediaRecorder API` 進行遠端畫面錄製與多格式輸出，並提供即時畫面截圖功能。
+### 🎥 Media & Device Control
+- **Dynamic Device Management**: The frontend can dynamically detect, enumerate, and switch audio input devices, providing a seamless device switching experience.
+- **Media Track Control**: Independently control the enable/disable of audio and video tracks, implementing mute, camera off, and other functions.
+- **Advanced Media Processing**: Implemented `MediaRecorder API` for remote screen recording with multi-format output, and provided real-time screenshot functionality.
 
-### ⚙️ 後端媒體處理
-- **FFmpeg 整合**: 後端服務整合 FFmpeg，提供將前端錄製的 WebM 格式影片轉換為通用性更高的 MP4 格式之服務。
-- **RESTful API 設計**: 提供清晰的 API 端點 (`/convert`) 用於提交轉檔任務與下載轉換後的檔案。
+### ⚙️ Backend Media Processing
+- **FFmpeg Integration**: The backend service integrates FFmpeg, providing the service to convert WebM format videos recorded by the frontend to the more universal MP4 format.
+- **RESTful API Design**: Provides clear API endpoints (`/convert`) for submitting conversion tasks and downloading converted files.
 
-### 🚀 前端架構與體驗
-- **現代化前端堆疊**: 採用 Vue 3 與 TypeScript 構建類型安全的組件，使用 Pinia 進行清晰的可響應式狀態管理。
-- **優質使用者介面**: 基於 Ant Design Vue 組件庫開發，提供專業且直覺的用戶操作界面。
-- **即時狀態反饋**: 在 UI 上清晰展示連線狀態、錄影計時等資訊，確保用戶知情權。
+### 🚀 Frontend Architecture & Experience
+- **Modern Frontend Stack**: Built type-safe components using React and TypeScript, using Zustand for clear reactive state management.
+- **High-Quality User Interface**: Developed based on the Ant Design component library, providing a professional and intuitive user operation interface.
+- **Real-time Status Feedback**: Clearly displays connection status, recording timers, and other information on the UI to ensure user awareness.
